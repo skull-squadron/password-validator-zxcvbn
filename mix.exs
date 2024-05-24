@@ -19,8 +19,8 @@ defmodule PasswordValidatorZxcvbn.MixProject do
         main: "PasswordValidator.Validators.ZXCVBNValidator",
         canonical: "https://hexdocs.pm/password_validator_zxcvbn"
       ],
-      source_url: "https://github.com/axelson/password-validator-zxcvbn",
-      homepage_url: "https://github.com/axelson/password-validator-zxcvbn"
+      source_url: "https://github.com/skull-squadron/password-validator-zxcvbn",
+      homepage_url: "https://github.com/skull-squadron/password-validator-zxcvbn"
     ]
   end
 
@@ -28,9 +28,9 @@ defmodule PasswordValidatorZxcvbn.MixProject do
     [
       name: @app,
       files: ["lib", "mix.exs", "README*", "LICENSE*", "Changelog.md"],
-      maintainers: ["Jason Axelson"],
+      maintainers: [""],
       licenses: ["Apache 2.0"],
-      links: %{"GitHub" => "https://github.com/axelson/password-validator-zxcvbn"}
+      links: %{"GitHub" => "https://github.com/skull-squadron/password-validator-zxcvbn"}
     ]
   end
 
@@ -58,7 +58,7 @@ defmodule PasswordValidatorZxcvbn.MixProject do
       {:credo, "~> 1.1", only: [:dev, :test], runtime: false},
       {:password_validator, "~> 0.4"},
       {:docception, github: "evnu/docception"},
-      {:zxcvbn, "~> 0.1.3"}
+      {:zxcvbn, github: "skull-squadron/zxcvbn-elixir"}
     ]
   end
 end

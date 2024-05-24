@@ -14,6 +14,8 @@ defmodule PasswordValidator.Validators.ZXCVBNValidatorTest do
 
       assert PasswordValidator.validate_password("poor password", opts) ==
                {:error, ["This is similar to a commonly used password"]}
+
+      assert PasswordValidator.validate_password(nil, opts) == :ok
     end
   end
 
@@ -35,9 +37,7 @@ defmodule PasswordValidator.Validators.ZXCVBNValidatorTest do
     end
 
     test "a nil password" do
-      assert_raise FunctionClauseError, fn ->
-        assert validate(nil, []) == :ok
-      end
+      assert validate(nil, []) == :ok
     end
 
     @tag :pending
